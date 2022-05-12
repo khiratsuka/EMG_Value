@@ -1,5 +1,6 @@
 #EMG Click
 #読み取るデータはCH1のみでOK
+#20220512test
 
 
 import spidev
@@ -32,7 +33,7 @@ while True:
         csv_data.append(str(2.048*adc_data/4096) + '\n')
         print(2.048*adc_data/4096)
         #time.sleep(1)
-        
+
     except KeyboardInterrupt:
         spi.close()
         f.writelines(csv_data)
